@@ -1,0 +1,147 @@
+/* 全体 */
+body {
+  margin: 0;
+  user-select: none;
+}
+.wapper {
+  background-image: url(./img/cloud1.PNG);
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+}
+
+/* メイン */
+main {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+/* スライドエリア */
+.slidearea {
+  margin: auto;
+  padding-top: 0.5rem;
+}
+.slide {
+  width: 100%;
+  max-height: calc(100vh - 250px);
+}
+
+/* メッセージエリア */
+.messagearea {
+  margin: auto 0.5rem 1rem;
+}
+.messagemenu {
+  display: flex;
+}
+.messagemenu span {
+  margin: auto;
+}
+.messagemenu .actor {
+  padding: 0.5rem;
+  box-sizing: border-box;
+  background-color: rgb(0, 0, 0, 0.8);
+  border-radius: 10px;
+  color: white;
+  font-size: larger;
+}
+.mlauto {
+  margin-left: auto;
+}
+.messagemenu button {
+  display: flex;
+  padding: 0.5rem;
+  border: solid darkcyan;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.messagemenu .btnon {
+  background-color: aquamarine;
+}
+.messagemenu .btnoff {
+  background-color: gray;
+  opacity: 0.8;
+}
+.messagewindow {
+  box-sizing: border-box;
+  height: 170px;
+  display: block;
+  background-color: rgb(0, 0, 0, 0.8);
+  border-radius: 10px;
+  color: white;
+  font-size: x-large;
+  cursor: pointer;
+}
+.messagetext {
+  padding: 1rem;
+  white-space: pre-line;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: auto;
+}
+.messagetext::after {
+  content: "▼";
+  animation: blink 1s ease-in-out infinite alternate;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 左右メニュー */
+nav {
+  margin: 0.5rem;
+}
+nav button {
+  /* margin: 0.5rem; */
+  display: block;
+  font-size: x-large;
+}
+.navIndex button {
+  margin-left: auto;
+}
+nav ul {
+  margin-top: 0;
+  width: max-content;
+  max-height: 90vh;
+  overflow: auto;
+  background: whitesmoke;
+  padding: 0.5rem;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 2px 2px 4px;
+  list-style: none;
+  font-size: larger;
+}
+nav ul li {
+  border-radius: 5px;
+  padding: 0 0.2rem;
+  cursor: pointer;
+  border-bottom: solid gainsboro;
+}
+nav ul li a {
+  text-decoration-line: blink;
+  color: black;
+}
+nav ul .active {
+  background: aquamarine;
+}
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0;
+  font-size: large;
+}
+.none {
+  display: none;
+}
